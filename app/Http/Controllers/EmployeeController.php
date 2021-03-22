@@ -14,8 +14,8 @@ class EmployeeController extends Controller
     function searchEmployee(Request $request) {
         
         if($request->ajax()) {
-            $data = Employee::search($request->get('search_text'))->get();
-            return response()->json($data);
+            $data = Employee::search($request->get('search_text'))->get();              
+             return response()->json($data);
         }
         
     }
